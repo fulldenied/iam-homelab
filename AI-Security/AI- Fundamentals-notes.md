@@ -1,21 +1,17 @@
-# Active Directory Basics – Tasks 6–8 (TryHackMe)
-*Completed: Nov 4, 2026*
+# AI Fundamentals & LLM Security – Notes
+*Nov 5, 2026*
 
-## Group Policy Objects (GPOs)
-- GPOs are linked to OUs and apply their settings to the users and computers inside that OU.
-- This makes it easier to manage settings consistently for each OU.
-- `gpupdate /force` applies GPO changes on a machine right away.
+## AI concepts
+- Machine learning: a model learns patterns from data and uses them to make predictions.
+- Generative AI: a type of machine learning that creates new content. LLMs generate text by predicting the most probable next token.
+- Token: a piece of text (a word or part of a word). Input and output are measured in tokens.
+- Parameters: the internal values a model learned during training.
 
-## Kerberos
-- Kerberos is the current default authentication protocol in Windows domains.
-- It is ticket-based: when a user logs in, they receive a TGT (Ticket Granting Ticket).
-- The TGT is used to request tickets for each service, so credentials don't have to be sent again.
+## OWASP Top 10 for LLM Applications (2026) – key risks
+- LLM01 Prompt Injection: input that changes what the model does and how it interacts with the user. In my lab it was the hardest attack to pull off, but the most harmful when it works.
+- LLM02 Sensitive Information Disclosure: the model reveals credentials or sensitive/personal information. Never put this kind of data in any prompt or setting.
+- LLM08 Hidden Context Exposure: anything in the model's hidden context can be exposed.
 
-## Trees and forests
-- A tree is a group of domains that share the same namespace (e.g., one company with a domain for each country or location).
-- A forest is a group of trees with different namespaces.
-
-## Trusts
-- A trust relationship lets users from one domain access certain resources in another domain.
-- One-way trust: if Domain A trusts Domain B, users in B can access resources in A.
-- Two-way trust: users in both domains can access resources in the other.
+## Lessons
+- Give AI agents least privilege, and temporary access only when needed (LLM03 Excessive Agency).
+- Keep the OWASP Top 10 for LLMs in mind when using or recommending AI in a company.
