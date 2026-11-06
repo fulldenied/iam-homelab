@@ -12,3 +12,4 @@ Hands-on labs from my move from IT support into Identity and Access Management (
 | [Lab 1: Active Directory](lab1-active-directory/) | Domain controller in Azure, OUs, GPOs, bulk user provisioning with PowerShell | Planned · Dec 2026 |
 | [Lab 2: Microsoft Entra ID](lab2-entra-id/) | MFA, Conditional Access, Intune, PIM, access reviews, SSO | Planned · Jan 2027 |
 | [Incident response](incident-response/) | Endpoint containment with Defender for Business, compromised-account drill | Planned · Jan 2027 |
+   | [AI security](AI-Security/) | Prompt injection lab against a local LLM (Ollama + Qwen 3.5), mapped to the OWASP Top 10 for LLMs | Done · Nov 2026 |
